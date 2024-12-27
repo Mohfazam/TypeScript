@@ -4,8 +4,6 @@ function greet(user: {
 }) {
     console.log(`name: ${user.name} and age is : ${user.age}`);
 }
-
-
-const  user: { name: string, age: number } = {name : "Sarwar", age: 25};
+const user: { name: string, age: number } = {name : "Sarwar", age: 25};
 
 greet(user);
