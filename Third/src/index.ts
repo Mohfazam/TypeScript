@@ -1,9 +1,13 @@
-function greet(user: {
-    name: string;
-    age: number;
-}) {
-    console.log(`name: ${user.name} and age is : ${user.age}`);
+function greet(user: schema) {
+    console.log(`Fist name: ${user.firstName} \nlast name: ${user.lastname} \nage : ${user.age}`);
 }
-const user: { name: string, age: number } = {name : "Sarwar", age: 25};
+
+type schema = {
+    firstName: string,
+    lastname: string,
+    age: number
+}
+
+const user: schema = {firstName : "Sarwar", lastname:"khan", age: 25};
 
 greet(user);
