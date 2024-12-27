@@ -2,7 +2,7 @@ import promptsync from "prompt-sync";
 // npm install --save-dev @types/prompt-sync          == need to run this command before using prompt-sunc
 const prompt = promptsync();
 
-function isLegal(age: number){
+function isLegal(age: number): boolean{
     if(age >= 18){
         return true;
     }
