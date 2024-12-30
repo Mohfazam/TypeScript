@@ -1,7 +1,7 @@
 //Given an array of positive integers as input, return the maximum value in the array
 
 function maximum(num: number[]): number{
-    let max = Infinity;
+    let max = -Infinity;
 
     for(let i = 0; i < num.length; i++){
         if(num[i] > max){
