@@ -7,7 +7,7 @@ type employee = {
 
 type manager = {
     name: string;
-    age: number;
+    department: string
 }
 
 
@@ -15,5 +15,8 @@ type teamlead = employee & manager;
 
 let t: teamlead = {
     name: "Sarwar",
-    age: 21
+    age: 21,
+    department: "IT"
 }
+
+console.log(t);
