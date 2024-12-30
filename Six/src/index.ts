@@ -8,16 +8,22 @@ interface User{
 }
 
 
-function candrive(value: User):boolean{
-    return value.age> 18;
+function candrive(value: User[]):User[]{
+    let ans = [];
+    for(let i = 0; i < value.length; i++){
+        if( value[i].age > 18){
+            ans.push(value[i]);
+        }
+    }
+    return ans;
 }
 
 
-let  user1: User = {
-    name: "Sarwar",
-    lastname: "Khan",
-    age: 1
-}
+let users: User[] = [
+    {name: "sarwar", lastname:"Khan", age:21},
+    {name: "John", lastname:"Doe", age:41},
+    {name: "Jane", lastname:"Doe", age:11}
+];
 
-let ans = candrive(user1);
-console.log(ans);
+let result = candrive(users);
+console.log(result);
