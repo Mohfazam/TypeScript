@@ -6,6 +6,16 @@ interface Address{
         pincode: number
 }
 
+class manager implements People{
+    name: string;
+    age: number;
+
+    constructor(name: string, age: number){
+        this.name = name;
+        this.age = age;
+    }
+}
+
 interface User {
     name: string;
     age: number;
@@ -19,15 +29,15 @@ interface Office {
 interface People{
     name: string;
     age: number;
-    greet: () => string;
+    // greet: () => string;
 }
 
 let person1: People = {
     name: "Sarvar",
     age: 99,
-    greet: () => {
-        return "HI"
-    }
+    // greet: () => {
+    //     return "HI"
+    // }
 }
 
 let user1: User ={
@@ -80,4 +90,4 @@ function canDrive(user: User){
 canDrive(user1);
 canDrive(user2);
 canDrive(person1);
-console.log(person1.greet());
+// console.log(person1.greet());
