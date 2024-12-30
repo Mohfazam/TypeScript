@@ -12,7 +12,7 @@ interface User {
 
 let user1: User ={
     name: "Sarwar",
-    age: 19,
+    age: 79,
     address:{
         city: "Hyderabad",
         country: "India",
@@ -21,4 +21,23 @@ let user1: User ={
 
 }
 
+
+function isLegal(user:User): boolean{
+    if(user.age > 18 && user.age <= 70){
+        return true;
+    }
+    else if(user.age > 70){
+        return false;
+    }
+    else if(user.age < 18){
+        return false;
+    }
+    else{
+        console.log("Wrong input");
+        return false;
+    }
+}
+
 console.log(user1);
+let ans = isLegal(user1);
+console.log(ans);
