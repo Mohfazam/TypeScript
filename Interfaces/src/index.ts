@@ -16,6 +16,20 @@ interface Office {
     address?: Address
 }
 
+interface People{
+    name: string;
+    age: number;
+    greet: () => string;
+}
+
+let person1: People = {
+    name: "Sarvar",
+    age: 99,
+    greet: () => {
+        return "HI"
+    }
+}
+
 let user1: User ={
     name: "Sarwar",
     age: 79,
@@ -65,3 +79,5 @@ function canDrive(user: User){
 
 canDrive(user1);
 canDrive(user2);
+canDrive(person1);
+console.log(person1.greet());
