@@ -1,9 +1,9 @@
-console.log("Hello");
+// console.log("Hello");
 
 interface User {
     name: string;
     age: number;
-    address:{
+    address?: {
         city:string;
         country: string;
         pincode: number
@@ -18,6 +18,11 @@ let user1: User ={
         country: "India",
         pincode: 500034 
     }
+}
+
+let user2: User ={
+    name: "Mohfazam",
+    age: 19
 
 }
 
@@ -38,6 +43,19 @@ function isLegal(user:User): boolean{
     }
 }
 
-console.log(user1);
-let ans = isLegal(user1);
-console.log(ans);
+
+
+
+function canDrive(user: User){
+    let ans = isLegal(user);
+    if(ans){
+        console.log(`\n${user.name} can drive\n`);
+    }
+    else{
+        console.log(`\n${user.name} can't drive\n`);
+    
+    }
+}
+
+canDrive(user1);
+canDrive(user2);
