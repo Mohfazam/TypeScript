@@ -1,24 +1,30 @@
 console.log("Hello");
 
 interface User{
+    id: string;
     name: string;
     age: number;
+    email: string;
+    password: string;
 };
 
-const sarwar: User= {
+type UpdateProps = Pick<User, 'name' | 'age' | 'email'>
+
+const sarwar: UpdateProps= {
     name: "Sarwar",
-    age: 19
+    age: 19,
+    email: "1@"
 }
 
-const azam: User= {
+const azam: UpdateProps= {
     name: "azam",
     age: 10
 }
 
-function sumOfAge(a:User, b:User){
+function sumOfAge(a:UpdateProps, b:UpdateProps){
     return a.age + b.age;
 }
 
-let ans = sumOfAge(sarwar, azam);
+// let ans = sumOfAge(sarwar, azam);
 
-console.log(ans);
+// console.log(ans);
