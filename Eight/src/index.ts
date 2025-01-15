@@ -1,9 +1,9 @@
 interface user{
-    id: string;
+    readonly id: string;
     name: string;
     age: number;
-    email: string;
-    password: string;
+    readonly email: string;
+    readonly password: string;
 }
 
 type UpdateProps1 = Pick<user, 'id' | 'email' | 'password'>
@@ -11,9 +11,12 @@ type UpdateProps2 = Pick<user, 'age' | 'name'>
 
 type UpdatePropsOptional = Partial<user>;
 
-const user1: UpdateProps2 = {
+const user1: user = {
     name: "Sarwar",
-    age: 10
+    age: 10,
+    id: "1111", 
+    email: "mohd.sarwar.code@gmail.com",
+    password: "qwertyuiop"
 }
 
 const user2: UpdateProps2 = {
@@ -26,3 +29,5 @@ function sumOfAge(x:UpdateProps2, y:UpdateProps2):number{
 }
 
 console.log(sumOfAge(user1, user2));
+
+
