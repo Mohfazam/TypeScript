@@ -1,7 +1,13 @@
 interface user{
+    id?: string;
     name: string;
     age: number;
+    email?: string;
+    password?: string;
 }
+
+type UpdateProps1 = Pick<user, 'id' | 'email' | 'password'>
+type UpdateProps2 = Pick<user, 'age'>
 
 const user1: user = {
     name: "Sarwar",
@@ -13,7 +19,7 @@ const user2: user = {
     age: 20
 }
 
-function sumOfAge(x:user, y:user):number{
+function sumOfAge(x:UpdateProps2, y:UpdateProps2):number{
     return x.age + y.age;
 }
 
