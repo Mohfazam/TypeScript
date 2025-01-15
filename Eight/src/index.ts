@@ -1,20 +1,22 @@
 interface user{
-    id?: string;
+    id: string;
     name: string;
     age: number;
-    email?: string;
-    password?: string;
+    email: string;
+    password: string;
 }
 
 type UpdateProps1 = Pick<user, 'id' | 'email' | 'password'>
-type UpdateProps2 = Pick<user, 'age'>
+type UpdateProps2 = Pick<user, 'age' | 'name'>
 
-const user1: user = {
+type UpdatePropsOptional = Partial<user>;
+
+const user1: UpdateProps2 = {
     name: "Sarwar",
     age: 10
 }
 
-const user2: user = {
+const user2: UpdateProps2 = {
     name: "mohfazam",
     age: 20
 }
