@@ -30,5 +30,3 @@ function sumOfAge(x:UpdateProps2, y:UpdateProps2):number{
 
 console.log(sumOfAge(user1, user2));
 
-
-
