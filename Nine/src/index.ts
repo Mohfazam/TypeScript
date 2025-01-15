@@ -39,3 +39,21 @@ newUsers.set("Talha", {id: 4, name: "Talha", age:25});
 newUsers.set("John", {id: 5, name: "John", age:22});
 
 console.log("\n\n New Users are :", newUsers);
+
+interface newType{
+    id: number;
+    name: string;
+    emailId: string;
+    username: string;
+    password:string;
+}
+
+type excludeNewType = Omit<newType, 'name' | 'emailId' | 'username' | 'password'>;
+
+const userX:excludeNewType ={
+    id: 20
+}
+
+
+
+console.log(userX);
