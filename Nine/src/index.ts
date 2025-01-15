@@ -6,7 +6,7 @@ interface user{
     age: number
 }
 
-const users:{[key: string]:user} = {
+const users:Record<string, user>= {
 
     "sarwar":{
         id: 1,
