@@ -31,3 +31,11 @@ const users:Record<string, user>= {
 
 console.log("The Users Object is: ", users);
 console.log("Total age is: ", totalAge(users));
+
+
+const newUsers = new Map<string, user>();
+newUsers.set("Mubashir", {id: 3, name: "Mubashir", age:28});
+newUsers.set("Talha", {id: 4, name: "Talha", age:25});
+newUsers.set("John", {id: 5, name: "John", age:22});
+
+console.log("\n\n New Users are :", newUsers);
