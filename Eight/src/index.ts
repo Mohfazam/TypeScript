@@ -11,7 +11,7 @@ type UpdateProps2 = Pick<user, 'age' | 'name'>
 
 type UpdatePropsOptional = Partial<user>;
 
-const user1: user = {
+const user1: Readonly<user> = {
     name: "Sarwar",
     age: 10,
     id: "1111", 
@@ -30,3 +30,4 @@ function sumOfAge(x:UpdateProps2, y:UpdateProps2):number{
 
 console.log(sumOfAge(user1, user2));
 
+// user1.age = 20
