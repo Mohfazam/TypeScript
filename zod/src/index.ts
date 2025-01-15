@@ -9,9 +9,11 @@ const userProfileSchema = z.object({
     age:z.number().min(18, {message: "You must be at least 18 years old"}).optional()
 });
 
+type finalUserSchema = z.infer<typeof userProfileSchema>;
+
 app.put("/user", (req, res) => {
     const {success} = userProfileSchema.safeParse(req.body);
-    const updateBody = req.body;
+    const updateBody:finalUserSchema = req.body;
 
     if(!success){
         res.status(411).json({});
